@@ -1,8 +1,47 @@
 version: '3.4'
 
+networks:
+  api-dev:
+    driver: bridge
+
 services:
   psqlanddockercomposeexample:
     image: ${DOCKER_REGISTRY-}psqlanddockercomposeexample
     build:
       context: .
       dockerfile: PsqlAndDockerComposeExample/Dockerfile
+    environment:
+      DB_CONNECTIONSTRING: "host=127.0.0.1;Port=5433;Database=postgres;username=user;Password=123;"
+    ports:
+      - "8003:80"
+      - "8004:443"
+    networks: 
+      - api-dev
+    depends_on:
+      postgresql_db:
+        condition: service_healthy
+    healthcheck:
+      test: curl -sS http://127.0.0.1/health || echo 1
+      interval: 10s
+      timeout: 20s
+      retries: 4    
+        
+  postgresql_db:
+      image: postgres
+      # explicit container name
+      container_name: postgresql_db
+      environment:
+        - POSTGRES_USER=user
+        - POSTGRES_PASSWORD=123
+        - POSTGRES_DB=postgres
+      ports:
+        - "5433:5432"
+      networks:
+        - api-dev
+      healthcheck:
+        test: [ "CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-user} -d ${POSTGRES_DB:-postgres}" ]
+        interval: 2s
+        timeout: 5s
+        retries: 10    
+          
+          

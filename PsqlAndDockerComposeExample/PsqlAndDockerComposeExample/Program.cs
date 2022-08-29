@@ -1,3 +1,6 @@
+using Microsoft.EntityFrameworkCore;
+using PsqlAndDockerComposeExample;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -6,6 +9,11 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+builder.Services.AddHealthChecks();
+
+builder.Services.AddDbContext<postgresContext>(_ =>
+    _.UseNpgsql(Environment.GetEnvironmentVariable("DB_CONNECTIONSTRING")?? throw new Exception()));
 
 var app = builder.Build();
 
@@ -16,9 +24,17 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-app.UseHttpsRedirection();
+app.UseRouting();
 
-app.UseAuthorization();
+app.UseEndpoints(endpoints =>
+{
+    endpoints.MapHealthChecks("/health");
+});
+
+
+// app.UseHttpsRedirection();
+
+// app.UseAuthorization();
 
 app.MapControllers();
 

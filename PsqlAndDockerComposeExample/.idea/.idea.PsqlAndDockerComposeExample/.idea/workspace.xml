@@ -8,13 +8,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9923a922-fd07-4723-a374-129c7e85ed92" name="Changes" comment="">
+    <list default="true" id="9923a922-fd07-4723-a374-129c7e85ed92" name="Changes" comment="Edit">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.PsqlAndDockerComposeExample/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.PsqlAndDockerComposeExample/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PsqlAndDockerComposeExample/.dockerignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PsqlAndDockerComposeExample/Dockerfile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PsqlAndDockerComposeExample/Properties/launchSettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/PsqlAndDockerComposeExample/Properties/launchSettings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PsqlAndDockerComposeExample/Controllers/WeatherForecastController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PsqlAndDockerComposeExample/Controllers/WeatherForecastController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PsqlAndDockerComposeExample/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PsqlAndDockerComposeExample/Program.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PsqlAndDockerComposeExample/PsqlAndDockerComposeExample.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/PsqlAndDockerComposeExample/PsqlAndDockerComposeExample.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PsqlAndDockerComposeExample/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/PsqlAndDockerComposeExample/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,7 +46,7 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
 }</component>
-  <component name="RunManager" selected=".NET Launch Settings Profile.PsqlAndDockerComposeExample">
+  <component name="RunManager" selected="Docker.docker-compose.yml: Compose Deployment">
     <configuration name="PsqlAndDockerComposeExample" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
       <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/PsqlAndDockerComposeExample/PsqlAndDockerComposeExample.csproj" />
       <option name="LAUNCH_PROFILE_TFM" value="net6.0" />
@@ -124,16 +123,27 @@
       <EXTENSION ID="com.jetbrains.rider.docker.debug" isFastModeEnabled="true" isPublishEnabled="true" />
       <method v="2" />
     </configuration>
+    <configuration name="docker-compose.yml: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="sourceFilePath" value="docker-compose.yml" />
+        </settings>
+      </deployment>
+      <EXTENSION ID="com.jetbrains.rider.docker.debug" isFastModeEnabled="true" isPublishEnabled="true" />
+      <method v="2" />
+    </configuration>
     <list>
       <item itemvalue=".NET Launch Settings Profile.PsqlAndDockerComposeExample" />
       <item itemvalue=".NET Launch Settings Profile.PsqlAndDockerComposeExample: IIS Express" />
       <item itemvalue="Docker.PsqlAndDockerComposeExample/Dockerfile" />
       <item itemvalue="Docker.PsqlAndDockerComposeExample/Dockerfile publish" />
+      <item itemvalue="Docker.docker-compose.yml: Compose Deployment" />
       <item itemvalue="Docker.PsqlAndDockerComposeExample.api: Compose Deployment" />
       <item itemvalue="Docker.PsqlAndDockerComposeExample: Compose Deployment" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Docker.docker-compose.yml: Compose Deployment" />
         <item itemvalue="Docker.PsqlAndDockerComposeExample/Dockerfile" />
         <item itemvalue="Docker.PsqlAndDockerComposeExample: Compose Deployment" />
         <item itemvalue="Docker.PsqlAndDockerComposeExample/Dockerfile publish" />
@@ -150,7 +160,7 @@
       <option name="presentableId" value="Default" />
       <updated>1661771942021</updated>
       <workItem from="1661771988443" duration="2072000" />
-      <workItem from="1661774280963" duration="604000" />
+      <workItem from="1661774280963" duration="1809000" />
     </task>
     <task id="LOCAL-00001" summary="Init">
       <created>1661772621427</created>
@@ -159,7 +169,14 @@
       <option name="project" value="LOCAL" />
       <updated>1661772621427</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Edit">
+      <created>1661775090030</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1661775090030</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -181,6 +198,26 @@
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="Init" />
-    <option name="LAST_COMMIT_MESSAGE" value="Init" />
+    <MESSAGE value="Edit" />
+    <option name="LAST_COMMIT_MESSAGE" value="Edit" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/PsqlAndDockerComposeExample/Controllers/WeatherForecastController.cs</url>
+          <line>22</line>
+          <properties documentPath="C:\Dotnet\PsqlAndDockerComposeExample\PsqlAndDockerComposeExample\PsqlAndDockerComposeExample\Controllers\WeatherForecastController.cs" initialLine="22" containingFunctionPresentation="method 'Get'">
+            <startOffsets>
+              <option value="675" />
+            </startOffsets>
+            <endOffsets>
+              <option value="676" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
