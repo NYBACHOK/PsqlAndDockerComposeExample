@@ -21,7 +21,11 @@ public class WeatherForecastController : ControllerBase
     [HttpGet(Name = "GetWeatherForecast")]
     public IEnumerable<WeatherForecast> Get([FromServices] postgresContext context)
     {
-        Console.WriteLine(context.Database.CanConnect()); 
+        bool isCanConnect = context.Database.CanConnect();
+        Console.WriteLine(isCanConnect);
+
+        if (!isCanConnect)
+            throw new Exception("Cant connect to db");
         
         return Enumerable.Range(1, 5).Select(index => new WeatherForecast
             {
