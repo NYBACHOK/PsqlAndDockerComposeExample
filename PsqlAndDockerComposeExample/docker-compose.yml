@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  psqlanddockercomposeexample:
+    image: ${DOCKER_REGISTRY-}psqlanddockercomposeexample
+    build:
+      context: .
+      dockerfile: PsqlAndDockerComposeExample/Dockerfile
